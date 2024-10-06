@@ -47,13 +47,6 @@ const taskList = document.getElementById('taskList');
 
 addButton.addEventListener('click', addTask); // создаём обработчик события --> при клике на кнопку --> срабатывает функция
 
-// let clickFunction = () => {
-//     const clickHere = document.getElementById('clickHere');
-//     const image = document.getElementById('img');
-//     image.classList.toggle('hidden');
-// }
-
-// clickHere.addEventListener('click', clickFunction);
 
 let clickFunction = () =>{
     const click = document.getElementById('click')
