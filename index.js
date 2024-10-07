@@ -47,6 +47,13 @@ const taskList = document.getElementById('taskList');
 
 addButton.addEventListener('click', addTask); // создаём обработчик события --> при клике на кнопку --> срабатывает функция
 
+// Добавляем обработчик события --> чтобы задачки добавлялись по нажатию на клавишу Enter
+taskInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // предотвращаем стандартное поведение (например, отправка формы)
+        addTask(); // вызываем функцию добавления задачи
+    }
+});
 
 let clickFunction = () =>{
     const click = document.getElementById('click')
