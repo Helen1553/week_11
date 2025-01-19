@@ -16,17 +16,17 @@ body {
         text-align: center;
     }
     
-    input {
+    .input {
         width: 70%;
         padding: 10px;
-        margin-left: 60px;
+        margin-left: 0.5rem;
         margin-bottom: 10px;
     }
     
-    button {
+    .btn {
         width: 70%;
         padding: 10px;
-        margin-left: 70px;
+        margin-left: 0.6rem;
         background-color: #22c29c;
         color: white;
         border: none;
@@ -34,7 +34,7 @@ body {
         cursor: pointer;
     }
     
-    button:hover {
+    .btn:hover {
         background-color: #006e56;
     }
     

@@ -30,7 +30,7 @@ const addButton = document.getElementById('addButton');
 const taskList = document.getElementById('taskList');
 
 // Создаём функцию, которая будет срабатывать при клике на кнопку (обработчик события - ниже)
-    let addTask = () => {
+    const addTask = () => {
          // переменная для значения = введенному значению в инпут от пользователя
         const newTask = document.createElement('li'); // создаём новый элемент списка
         newTask.textContent = taskInput.value; // новый элемент списка = то, что ввел пользователь
@@ -41,7 +41,7 @@ const taskList = document.getElementById('taskList');
     };
 
     //Функция для вычеркивания задач из тудушки (aka пометка "выполнено")
-    function toggleTaskCompletion(event) {
+    const toggleTaskCompletion = (event) => {
         event.target.classList.toggle('completed');
     }
 
@@ -55,7 +55,7 @@ taskInput.addEventListener('keypress', function(event) {
     }
 });
 
-let clickFunction = () =>{
+const clickFunction = () =>{
     const click = document.getElementById('click')
     const image = document.getElementById('img');
     image.classList.toggle('hidden');
