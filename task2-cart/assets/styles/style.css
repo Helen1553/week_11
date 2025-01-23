@@ -1,0 +1,437 @@
+.body{
+    display: grid;
+    grid-template: 10% 1.5% 76% 1.5% 11%/5% 90% 5%;
+
+    width: 99vw;
+    height: 98vh;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 255, 255);
+    /* border: solid black; */
+
+    .header{
+        grid-area: 1/2/2/3;
+
+        display: flex;
+        flex-direction: row;
+
+        .header_flex-item-left{
+            align-content: center;
+            width: 40%;
+            
+
+            .btn-arrow{
+                width: 4rem;
+                height: 3rem;
+                
+                border: solid white;
+                border-radius: 6px;
+
+                background-color: white;
+
+                cursor: pointer;
+
+                .arrow-left{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+            .btn-arrow:hover{
+                background-color:  #4a89ee45;
+            }
+        }
+
+        .header_flex-item-right{
+            display: flex;
+            width: 60%;
+            height: 100%;
+
+            .title{
+                align-items: center;
+                text-transform: uppercase;
+
+                a{
+                    position: relative; /*чтобы подчеркивалось только оглавление*/
+                    color: black;
+                    cursor: pointer;
+                    text-decoration: none; /*убираем подчёркивание*/
+                }
+
+                a:after {
+                    display: block; /*подчёркивание снизу*/
+                    position: absolute; 
+                    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+                    width: 0;/*задаём длинну линии до наведения курсора*/
+                    height: 8px; /*задаём ширину линии*/
+                    background-color:  #4a89ee8f; /*задаём цвет линии*/
+                    content: "";
+                    transition: width 0.7s ease-out; /*задаём время анимации*/
+                }
+                
+                a:hover:after,a:focus:after {
+                    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+                }
+            }
+        }
+    }
+
+    .main{
+        grid-area: 3/2/4/3;
+        /* border: solid green; */
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .main_flex-item1_product-card1{
+            display: flex;
+            flex-direction: row;
+
+            height: 22%;
+
+            .product-card1_img1{
+                display: flex;
+                justify-content: center;
+
+                width: 20%;
+                height: 100%;
+
+                .img_sweater-green{
+                    height: 100%;
+                    cursor: pointer;
+                }
+
+                .img_sweater-green:hover{
+                    transform: scale(1.5);
+                    transition: transform 1.4s;
+                    box-shadow: 1px 1px 10px  black;
+                }
+            }
+        }
+
+        .main_flex-item2_product-card2{
+            display: flex;
+            flex-direction: row;
+
+            height: 22%;
+
+            .product-card2_img2{
+                display: flex;
+                justify-content: center;
+
+                width: 20%;
+                height: 100%;
+
+                .img_jeans{
+                    height: 100%;
+                    cursor: pointer;
+                }
+
+                .img_jeans:hover{
+                    transform: scale(1.5);
+                    transition: transform 1.4s;
+                    box-shadow: 2px 2px 10px  black;
+                }
+            }
+        }
+
+        .main_flex-item3_product-card3{
+            display: flex;
+            flex-direction: row;
+
+            height: 22%;
+
+            .product-card3_img3{
+                display: flex;
+                justify-content: center;
+
+                width: 20%;
+                height: 100%;
+
+                .img_trainers{
+                    height: 100%;
+                    cursor: pointer;
+                }
+
+                .img_trainers:hover{
+                    transform: scale(1.5);
+                    transition: transform 1.4s;
+                    box-shadow: 2px 2px 10px  black;
+                }
+            }
+        }
+
+        .main_flex-item4_product-card4{
+            display: flex;
+            flex-direction: row;
+
+            height: 22%;
+
+            .product-card4_img4{
+                display: flex;
+                justify-content: center;
+
+                width: 20%;
+                height: 100%;
+
+                .img_sweater-purple{
+                    height: 100%;
+                    cursor: pointer;
+                }
+
+                .img_sweater-purple:hover{
+                    transform: scale(1.5);
+                    transition: transform 1.4s;
+                    box-shadow: 2px 2px 10px  black;
+                }
+            }
+        }
+
+        .product-card1_inf{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            width: 80%;
+            height: 100%;
+
+            .inf_flex-item1{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
+
+                height: 30%;
+                width: 65%;
+                margin-top: 0.5rem;
+
+                .inf_description{
+                    cursor: pointer;
+
+                    .inf_description-text{
+                        font-weight: bold;
+                    }
+
+                    .inf_description-text:hover{
+                        border-bottom: 2px solid #707070;
+                    }
+                }
+
+                .inf_cost{
+                    font-weight:bolder;
+                    font-size: 1rem;
+
+                    cursor: pointer;
+                }
+            }
+
+            .inf_flex-item2{
+                display: flex;
+                align-items: end;
+                height: 20%;
+
+                .inf_size-colour{
+                    cursor: pointer;
+                }
+            }
+
+            .inf_flex-item3{
+                height: 30%;
+
+                margin-bottom: 0.5rem;
+
+                .inf_quantity-container{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 0.5rem;
+
+                    height: 70%;
+                    width: 20%;
+
+                    .inf_quantity-delete{
+                        width: 20%;
+
+                        .inf_quantity-delete-btn{
+                            width: 100%;
+                            height: 100%;
+                            border: solid white;
+
+                            background-color: white;
+                            cursor: pointer;
+
+                            .minus{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .inf_quantity-delete-btn:hover{
+                            border: 2px solid #707070;
+                            border-radius: 10%;
+                        }
+                    }
+
+                    .inf_quantity{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        width: 20%;
+                        height: 100%;
+                    }
+
+                    .inf_quantity-add{
+                        width: 20%;
+
+                        .inf_quantity-add-btn{
+                            width: 100%;
+                            height: 100%;
+
+                            border: solid white;
+                            background-color: white;
+                            cursor: pointer;
+
+                            .plus{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .inf_quantity-add-btn:hover{
+                            border: 2px solid #4a89eeaf;
+                            border-radius: 10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer{
+        grid-area: 5/2/6/3;
+        
+
+        display: flex;
+        flex-direction: column;
+
+        .footer_promotionalcode{
+            
+
+            width: 90%;
+            height: 48%;
+
+            
+
+            
+
+            .promocode{
+                height: 85%;
+                width: 30%;
+
+                margin-left: 3rem;
+                outline: none;
+                border: solid white;
+                border-bottom: 1px solid #707070;
+            }
+        }
+
+        .footer_totalcost-button{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 7rem;
+            
+
+            width: 73%;
+            height: 52%;
+
+            .footer_totalcost-button_processorder{
+                margin-top: 0.5rem;
+                margin-left: 4.5rem;
+
+                button{
+                    position: relative; /* чтобы закрашивалась только кнопочка, а не весь экран */
+                    transition: all 1s; /*свойство изменения цвета шрифта */
+
+                    height: 100%;
+                    width: 8rem;
+                    height: 2.5rem;
+
+                    font-size: 1rem;
+                    text-align: center;
+
+                    border: 1px solid #707070;
+                    background-color: rgb(241,240,238);
+                    border-radius: 5px;
+
+                    cursor: pointer;
+                }
+                button span{
+                    position: relative; /*чтобы текст не пропадал */
+                    z-index: 2;
+                }
+                
+                button:after{
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: #4a89eeaf;
+                    transition: all 2s;
+                    border-radius: 5px;
+                }
+                
+                button:hover{
+                    color: #fff;
+                }
+                
+                button:hover:after{
+                    width: 100%;
+                }
+            }
+
+            .footer_totalcost-button_totalcost{
+                display: flex;
+                flex-direction: column;
+
+                height: 100%;
+                width: 30%;
+
+                .footer_totalcost-button_totalcost-finalprice{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 8rem;
+
+                    height: 50%;
+
+                    .totalcost_text{
+                        align-content: start;
+
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+
+                    .totalcost{
+                        align-content: start;
+
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .footer_totalcost-button_totalcost-taxesinf{
+                    height: 50%;
+
+                    p{
+                        font-size: 0.6rem;
+                        text-transform: uppercase;
+                        color: #707070;
+                    }
+                }
+            }
+        }
+    }
+}
